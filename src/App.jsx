@@ -20,7 +20,6 @@ function App() {
           <Route path="/update" element={<Update />} />
           <Route path="/delete" element={<Delete />} />
         </Routes>
-        <Link to={'/read/1'}>Read test</Link>
       </BrowserRouter>
     </MovieProvider>
   );
