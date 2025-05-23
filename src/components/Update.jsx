@@ -39,7 +39,7 @@ function Update() {
 
   return (
     <div>
-      <h2>Edit Film</h2>
+      <h2>Edit Films</h2>
       {!found ? (
         <>
           <input

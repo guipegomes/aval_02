@@ -17,7 +17,7 @@ function Create() {
 
 	return (
 		<div>
-      <h2>Register Film</h2>
+      <h2>Register Films</h2>
       <form onSubmit={handleSubmit}>
         <input
           placeholder="Name"
