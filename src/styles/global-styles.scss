@@ -1,0 +1,31 @@
+:root {
+  --color-bg: #fdc98028;
+  --color-font: #2e2823;
+}
+
+h1, h2, h3 {
+  font-family: 'Libre Baskerville', serif;
+  //font-family: 'UnifrakturCook', serif;
+  letter-spacing: 2px;
+}
+
+.website-title {
+  font-size: 120px;
+}
+
+body {
+  min-height: 100vh;
+
+  font-family: 'EB Garamond', serif;
+  letter-spacing: 1px;
+  font-weight: 400;
+  color: var(--color-font);
+
+  background-color: var(--color-bg);
+  background-image: url(/public/images/texture-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: color-burn;
+}
+
