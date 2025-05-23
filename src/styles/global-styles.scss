@@ -1,5 +1,6 @@
 :root {
   --color-bg: #fdc98028;
+  --color-brand-100: #f5d5a7;
   --color-font: #2e2823;
 }
 
@@ -22,7 +23,7 @@ body {
   color: var(--color-font);
 
   background-color: var(--color-bg);
-  background-image: url(/public/images/texture-bg.jpg);
+  background-image: url(/images/texture-bg.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
