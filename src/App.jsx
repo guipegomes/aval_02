@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import Home from './components/Home';
-import Create from './components/Create';
-import Read from './components/Read';
-import Update from './components/Update';
-import Delete from './components/Delete';
+import Home from './components/Home/Home.jsx';
+import Create from './components/Create/Create.jsx';
+import Read from './components/Read/Read.jsx';
+import Update from './components/Update/Update.jsx';
+import Delete from './components/Delete/Delete.jsx';
 import Header from './components/Header/Header.jsx';
 import { MovieProvider } from "./context/MovieProvider";
 

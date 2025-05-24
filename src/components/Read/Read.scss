@@ -1,0 +1,52 @@
+.showcase {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 20px;
+  p {
+    font-size: 36px;
+    font-style: italic;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+  }
+}
+
+.movie-info {
+  width: 400px;
+  height: 400px;
+  padding: 8px;
+  margin: 10px;
+
+  position: relative;
+  justify-self: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  border: 4px double #333;
+
+  .detail-btn {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    padding: 4px 8px;
+    color: #333;
+    border-radius: 4px;
+    transition: all 200ms ease;
+  }
+
+  .detail-btn:hover {
+    text-decoration: underline;
+  }
+
+  .weight-400 {
+    font-weight: 400;
+  }
+
+  .italic {
+    font-style: italic;
+  }
+}

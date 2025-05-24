@@ -1,0 +1,25 @@
+.delete-container {
+
+  .search-section,
+  .result-section {
+    padding: 10px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .result-section {
+    padding: 10px;
+    color: #333;
+    text-align: left;
+
+    h4 {
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin: 4px 0;
+    }
+  }
+}

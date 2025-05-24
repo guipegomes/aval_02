@@ -1,7 +1,8 @@
 import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { MovieContext } from "../context/MovieContext";
+import { MovieContext } from "../../context/MovieContext";
+import './Update.scss'
 
 function Update() {
   const { apiUrl, fetchMovies } = useContext(MovieContext);
@@ -18,7 +19,7 @@ function Update() {
       setFound(true);
       setError("");
     } catch {
-      setError("Film not found.");
+      setError("Filme não encontrado.");
       setFound(false);
     }
   };
@@ -38,43 +39,49 @@ function Update() {
   };
 
   return (
-    <div>
-      <h2>Edit Films</h2>
+    <div className="edit-container">
+      <h2>Editar Filmes</h2>
+
       {!found ? (
-        <>
+        <div className="search-section">
+          {error && <div className="error">{error}</div>}
           <input
-            placeholder="Film ID"
+            placeholder="ID Filme"
             value={id}
             onChange={(e) => setId(e.target.value)}
           />
-          <button onClick={searchMovie}>Search</button>
-          <button onClick={() => navigate("/")}>Back</button>
+          <div className="buttons-wrapper">
+            <button onClick={searchMovie}>Pesquisar</button>
+            <button onClick={() => navigate("/")}>Voltar</button>
+          </div>
 
-          {error && <div style={{ color: "red", marginTop: "10px" }}>{error}</div>}
-        </>
+        </div>
       ) : (
         <form onSubmit={handleUpdate}>
           <input
-            placeholder="Name"
+            placeholder="Nome"
             value={form.name}
             onChange={(e) => setForm({ ...form, name: e.target.value })}
           />
           <input
-            placeholder="Genre"
+            placeholder="Gênero"
             value={form.genre}
             onChange={(e) => setForm({ ...form, genre: e.target.value })}
           />
           <input
-            placeholder="Release year"
+            placeholder="Ano de lançamento"
             value={form.year}
             onChange={(e) => setForm({ ...form, year: e.target.value })}
           />
-          <button type="submit">Save changes</button>
-          <button type="button" onClick={handleCancel}>Cancel</button>
-          <button type="button" onClick={() => navigate("/")}>Back</button>
+          <div className="buttons-wrapper">
+            <button type="submit">Salvar alterações</button>
+            <button type="button" onClick={handleCancel}>Cancelar</button>
+            <button type="button" onClick={() => navigate("/")}>Voltar</button>
+          </div>
         </form>
       )}
     </div>
+
   );
 }
 

@@ -11,7 +11,7 @@ export const MovieProvider = ({ children }) => {
       const response = await axios.get(apiUrl);
       setMovies(response.data);
     } catch (error) {
-      console.error("Error fetching films:", error);
+      console.error("Error fetching Movies:", error);
     }
   };
 

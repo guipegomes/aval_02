@@ -4,16 +4,11 @@
   --color-font: #2b3131;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: 'Libre Baskerville', serif;
-  //font-family: 'UnifrakturCook', serif;
   letter-spacing: 2px;
-}
-
-.website-title {
-  font-size: 120px;
-  line-height: 0.95em;
-  padding: 20px;
 }
 
 body {
@@ -30,5 +25,74 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-blend-mode: color-burn;
+  background-attachment: fixed;
 }
 
+.buttons-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  button {
+    padding: 6px 10px;
+    width: 100%;
+    background-color: #333;
+    cursor: pointer;
+    transition: all 200ms ease;
+    font-size: 16px;
+    font-family: inherit;
+    color: #f7f0e7;
+    font-weight: 600;
+  }
+
+  button:hover {
+    background-color: #cfc6bb;
+    color: #333;
+  }
+}
+
+.delete-container,
+.edit-container,
+.form-container {
+  width: 400px;
+  padding: 16px;
+  margin: 10px;
+
+  justify-self: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  border: 4px double #333;
+  position: relative;
+
+  h2 {
+    font-size: 36px;
+    font-style: italic;
+    padding: 10px 0 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  input {
+    padding: 6px 8px;
+    border: 1px solid #333;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: 16px;
+  }
+
+  input:focus {
+    outline: none;
+    border-color: #666;
+  }
+}
+
+.error {
+  color: #221c1c;
+  margin-top: 10px;
+  font-weight: 600;
+}
